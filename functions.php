@@ -53,13 +53,13 @@ add_action( 'wp_enqueue_scripts', 'hackeryou_styles');
 We'll let WordPress add them to our templates automatically instead
 of writing our own script tags in the header and footer. */
 
-function hackeryou_scripts() {
+function gh_scripts() {
 
 	//Don't use WordPress' local copy of jquery, load our own version from a CDN instead
 	wp_deregister_script('jquery');
   wp_enqueue_script(
   	'jquery',
-  	"http" . ($_SERVER['SERVER_PORT'] == 443 ? "s" : "") . "://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js",
+  	"https" . ($_SERVER['SERVER_PORT'] == 443 ? "s" : "") . "://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js",
   	false, //dependencies
   	null, //version number
   	true //load in footer
@@ -68,6 +68,13 @@ function hackeryou_scripts() {
   wp_enqueue_script(
     'plugins', //handle
     get_template_directory_uri() . '/js/plugins.js', //source
+    false, //dependencies
+    null, // version number
+    true //load in footer
+  );
+    wp_enqueue_script(
+    'colorbox', //handle
+    get_template_directory_uri() . '/js/jquery.colorbox-min.js', //source
     false, //dependencies
     null, // version number
     true //load in footer
@@ -82,7 +89,7 @@ function hackeryou_scripts() {
   );
 }
 
-add_action( 'wp_enqueue_scripts', 'hackeryou_scripts');
+add_action( 'wp_enqueue_scripts', 'gh_scripts');
 
 
 /* Custom Title Tags */
@@ -266,3 +273,7 @@ function is_blog () {
 	$posttype = get_post_type($post );
 	return ( ((is_archive()) || (is_author()) || (is_category()) || (is_home()) || (is_single()) || (is_tag())) && ( $posttype == 'post')  ) ? true : false ;
 }
+//file size
+@ini_set( 'upload_max_size' , '64M' );
+@ini_set( 'post_max_size', '64M');
+@ini_set( 'max_execution_time', '300' );

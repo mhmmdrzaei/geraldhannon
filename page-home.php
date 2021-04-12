@@ -46,7 +46,7 @@
   <h2>Website Under Construction</h2>
   <p>Coming to this website later in 2021: Gerald's Collected Journalism (1964- 2016) </p>
   <section class="book">
-    <img src="http://localhost:8888/geraldhannon/wp-content/uploads/2021/04/bookCover.png" alt="Immoral, Indecent and Scurrilous: Memoir of an Unrepentant Sex Radical Book Cover"> 
+    <img src="https://geraldhannon.com/wp-content/uploads/2021/04/bookCover.png" alt="Immoral, Indecent and Scurrilous: Memoir of an Unrepentant Sex Radical Book Cover"> 
     <p>Plus: Watch for his new memoir published in June 2021 by Cormorant Books:  Immoral, Indecent and Scurrilous: Memoir of an Unrepentant Sex Radical.<br><br> <a href="https://www.cormorantbooks.com/immoral-indecent-and-scurrilous">Visit Cormorant Books webpage for more Information.</a></p>
   
   </section>

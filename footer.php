@@ -1,6 +1,5 @@
 <footer>
-  <div class="container">
-    <p>&copy; HackerYou <?php echo date('Y'); ?></p>
+    <p>&copy; <?php echo date('Y'); ?> Gerald Hannon<br> All images and site content copyright GeraldHannon.</p>
   </div>
 </footer>
 

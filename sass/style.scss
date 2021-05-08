@@ -13,11 +13,21 @@
 @import 'sidebar';
 @import 'comments';
 @import 'footer';
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@100;300;400;600&display=swap');
 /*
 ====================================
 Default Styling
 ====================================
 */
+@mixin fontSize($sizeValue){
+    font-size: $sizeValue * 1px;
+    font-size: ($sizeValue/10) * 1rem;
+}
+.flex {
+	display: flex;
+	flex-flow: row wrap;
+}
+
 
 img {
 	max-width: 100%;
@@ -25,25 +35,122 @@ img {
 
 body {
 	color: #333;
+	font-family: 'Heebo', sans-serif;
 }
-
-.container {
-	max-width: 1200px;
+main {
+	max-width: 1000px;
 	margin: 0 auto;
+	padding: 0 5px;
 }
 
-.content {
-	float: left;
-	width: 65%;
-	margin-right: 5%;
+header {
+	
+	max-width: 1000px;
+	margin: 0 auto;
+	padding: 0 5px;
+
+	.headerMain {
+		@extend .flex;
+		width: 100%;
+		align-items:center;
+		justify-content:space-between;
+	}
+
+}
+//home page 
+
+.pageMain {
+	@extend .flex;
+	justify-content: space-between;
+	margin-top: 50px;
+
+	// align-items:center;
+	.imageMain {
+		width: 55%;
+		img {
+			// width: 52%;
+			// max-width: 500px;
+			height: auto;
+		}
+	}
+	.bookPreview {
+		margin-top: 100px;
+		width: 45%;
+		max-width: 490px;
+		.pageLinkPreview {
+			@include fontSize(8);
+			width: 120px;
+			line-height: 1.1;
+			border-bottom: 1px solid black;
+			margin: 0 0 10px 25px;
+		}
+		.bookPreviewInner{ 
+			@extend .flex;
+			justify-content: space-between;
+			figure {
+				max-width: 165px;
+
+			}
+			.bookPreviewContent {
+				p {
+					@include fontSize(10);
+				}
+				max-width: 210px;
+			}
+
+		}
+	}
+	.introText {
+		
+		width: 66%;
+		position: relative;
+		top: -150px;
+		p {
+			margin: 0;
+			@include fontSize(27);
+		}
+	}
+}
+//about this site
+.aboutSiteContent {
+
+	max-width: 800px;
+	margin: 50px auto 0;
+	figure {
+		text-align: center;
+		img {
+				max-width: 300px;
+				height: auto;
+			}
+
+	} 
 }
 
-.full {
-	width: 100%;
+// about me
+.aboutMeContent {
+	margin: 50px auto 0;
+	figure {
+		text-align: center;
+		img {
+				max-width: 280px;
+				height: auto;
+			}
+
+	} 
+	a {
+		 background: #ffed00;
+		 text-decoration: underline;
+	}
 }
 
-
-
+//footer 
+footer { 
+	p {
+		@include fontSize(8);
+		text-align: center;	
+	}
+	
+}
 
 
 

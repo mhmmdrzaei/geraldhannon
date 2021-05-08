@@ -14,17 +14,22 @@
 <body <?php body_class(); ?>>
 
 <header>
-  <div class="container">
-    <h1>
+  <section class="headerMain">
+  <div class="pageTitle" aria-label="Website Title">
+    
       <a href="<?php echo home_url( '/' ); ?>" title="<?php bloginfo( 'name', 'display' ); ?>" rel="home">
-        <?php bloginfo( 'name' ); ?>
+       <h1> <?php bloginfo( 'name' ); ?></h1>
+        <h2><?php bloginfo( 'description' ); ?></h2>
       </a>
-    </h1>
-
+    
+    
+  </div>
+  <section class="menuSection" aria-label="Menu">
     <?php wp_nav_menu( array(
       'container' => false,
       'theme_location' => 'primary'
     )); ?>
-  </div> <!-- /.container -->
+  </section>
+  </section>
 </header><!--/.header-->
 

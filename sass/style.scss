@@ -142,6 +142,56 @@ header {
 		 text-decoration: underline;
 	}
 }
+//book 
+.pageBookContent {
+	@extend .flex;
+	margin-top: 50px;
+	
+	.pageBookside {
+		width: 27%;
+		margin-right: 8%;
+		figure img {
+			height: auto;
+		}
+		.bookDetails {
+			margin-top: 12px;
+		}
+		.salesLinks {
+			list-style: none;
+			margin: 0;
+			padding: 0;
+			li{ 
+				margin: 6px 0;
+				a {
+					text-decoration: underline;
+					background: #00d400;
+				}
+			}
+		}
+	}
+	.pageBookMain {
+		width: 50%;
+		h2 a{
+			background:#00d400;
+			text-transform: uppercase;
+			text-decoration: underline;
+			@include fontSize(20);
+			max-width: 340px
+		}
+		figure {
+			text-align: right;
+			position: relative;
+			top: -75px;
+			left: 22%;
+			z-index: -1;
+			img {
+				max-width: 250px;
+    			height: auto;
+
+			}
+		}
+	}
+}
 
 //footer 
 footer { 

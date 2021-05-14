@@ -1,11 +1,14 @@
 <?php get_header();  ?>
-
-        <?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
-        <?php the_content(); ?>
+<main>
+    <?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
+    <section class="photosMain">
+        <section class="photosText">
+           <?php the_content(); ?> 
+        </section>
         <?php 
         $images = get_field('photo_carousel');
         if( $images ): ?>
-            <ul>
+            <ul class="photosContent">
                 <?php foreach( $images as $image ): ?>
                     <li>
                         <a class="photosBox" href="<?php echo esc_url($image['url']); ?>" title="<?php echo esc_html($image['caption']); ?>">
@@ -17,7 +20,14 @@
             </ul>
         <?php endif; ?>
 
-      <?php endwhile; // end the loop?>
-<?php wp_reset_query();?> 
+    </section>
+        
 
-<?php get_footer(); ?>
+
+      <?php endwhile; // end the loop?>
+    <?php wp_reset_query();?> 
+
+    <?php get_footer(); ?>
+    
+</main>
+

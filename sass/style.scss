@@ -78,7 +78,9 @@ header {
 		width: 45%;
 		max-width: 490px;
 		.pageLinkPreview {
+			a {
 			@include fontSize(8);
+			}
 			width: 120px;
 			line-height: 1.1;
 			border-bottom: 1px solid black;
@@ -88,7 +90,7 @@ header {
 			@extend .flex;
 			justify-content: space-between;
 			figure {
-				max-width: 165px;
+				max-width: 210px;
 
 			}
 			.bookPreviewContent {
@@ -176,7 +178,8 @@ header {
 			text-transform: uppercase;
 			text-decoration: underline;
 			@include fontSize(20);
-			max-width: 340px
+			max-width: 340px;
+			cursor: auto;
 		}
 		figure {
 			text-align: right;
@@ -191,6 +194,98 @@ header {
 			}
 		}
 	}
+}
+//press page
+.pressMain {
+	margin-top: 50px;
+}
+
+.pressEach {
+	margin: 10px 0 25px;
+	border-bottom: 0.1px solid black;
+	a {
+		background: #ff0429;
+		font-weight: 600;
+		padding: 2px 5px;
+		&:hover{
+			text-decoration: underline;
+		}
+	}
+}
+//photos
+
+.photosText {
+	a {
+		background: #0fe;
+		text-decoration: underline;
+	}
+}
+.photosContent {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	@extend .flex;
+
+}
+// Contact form 
+.wp-block-contact-form-7-contact-form-selector {
+	margin-top: 40px;
+}
+
+form {
+	text-align: right;
+}
+
+input, textarea {
+	@include fontSize(10);
+	width: 100%;
+	border: 1px solid black;
+	border-radius: 0;
+	outline: none;
+	min-height: 35px;
+	span {
+		text-align: left;
+	}
+}
+.wpcf7-not-valid-tip {
+	text-align: left;
+}
+::placeholder {
+  color: black;
+  opacity: 1; /* Firefox */
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+ color: black;
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+ color: black;
+}
+.email, .subject {
+	margin-bottom: 10px;
+}
+
+.submitButton {
+	text-align: right;
+	.wpcf7-submit {
+	width: 100px;
+	background: black;
+    color: white;
+    text-transform: uppercase;
+	}
+	.ajax-loader {
+		display: block;
+		margin: 5px 96%;
+	}
+
+
+}
+
+.contact {
+	margin: 0 auto;
+    width: 60%;
+    text-align: center;
 }
 
 //footer 

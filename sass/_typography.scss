@@ -21,8 +21,8 @@ h1 {
 		font-weight: 400;
 		margin: 0;
 }
-p, a {
-	@include fontSize(13);
+p, a{
+	@include fontSize(11);
 }
 
 /*

@@ -12,9 +12,12 @@
                 <?php foreach( $images as $image ): ?>
                     <li>
                         <a class="photosBox" href="<?php echo esc_url($image['url']); ?>" title="<?php echo esc_html($image['caption']); ?>">
-                             <img src="<?php echo esc_url($image['sizes']['medium']); ?>" alt="<?php echo esc_html($image['caption']); ?>" />
+                            <figure class="photoEach">
+                               <img src="<?php echo esc_url($image['sizes']['medium']); ?>" alt="<?php echo esc_html($image['caption']); ?>" /> 
+                            </figure>
+                            <p><?php echo esc_html($image['caption']); ?></p> 
                         </a>
-                        <p><?php echo esc_html($image['caption']); ?></p>
+                        
                     </li>
                 <?php endforeach; ?>
             </ul>

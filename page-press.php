@@ -19,9 +19,9 @@
 
                     ?>
                     <?php if($link) {?>
-                    <a href="<?php echo $link ;  ?>" target="_blank"><?php the_title(); ?> (Link)</a>
+                    <a href="<?php echo $link ;  ?>" target="_blank"><?php the_title(); ?> <img class="linkImg" src="<?php bloginfo('template_directory'); ?>/images/link.png"></a>
                     <?php } elseif ($upload) { ;?>
-                    <a href="<?php echo $upload['url']; ?>"target="_blank"><?php the_title(); ?> (PDF)</a>
+                    <a href="<?php echo $upload['url']; ?>"target="_blank"><?php the_title(); ?> <img class="pdfImg" src="<?php bloginfo('template_directory'); ?>/images/pdficon.png"></a>
 
                     <?php }; ?>
                     <p><?php the_field('publication_source_Press'); ?>, <?php the_field('writer_press'); ?>, <?php the_field('date_Press'); ?></p>

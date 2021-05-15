@@ -38,7 +38,7 @@ defined('ABSPATH') or die("You can't access this file directly.");
 
     <div class='asp_content'>
         <section class="articletitle">
-           <?php echo $r->title; ?> 
+           <?php echo $r->title; ?> <img class="pdfImgSS" src="<?php bloginfo('template_directory'); ?>/images/pdficon.png">
         </section>
         
         <?php if ($show_description == 1): ?>

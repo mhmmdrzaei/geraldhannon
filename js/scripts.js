@@ -6,6 +6,6 @@ $(function(){
 });
 
 $(document).ready(function(){
-	$(".photosBox").colorbox({rel:'group1',width:"100%", height:"100%",next:"→",previous:"←",current:false});
+	$(".photosBox").colorbox({rel:'group1',width:"100%", height:"100%",next:"→",previous:"←", close:"X",current:false});
 
 });

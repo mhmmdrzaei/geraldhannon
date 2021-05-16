@@ -25,6 +25,11 @@
     
   </div>
   <section class="menuSection" aria-label="Menu">
+    <ul class="toggle">
+                    <li></li>
+                    <li></li>
+                    <li></li>
+    </ul>
     <?php wp_nav_menu( array(
       'container' => false,
       'theme_location' => 'primary'

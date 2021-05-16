@@ -3,6 +3,7 @@
     <?php if(have_posts()) : while(have_posts()) : the_post(); ?>
     <?php endwhile; endif; ?>
   <section class="pressMain">
+    <h3 class="pressTitle"><?php the_title(); ?></h3>
       <?php $args = array( 'post_type' => 'press', 
                 'order'       => 'DESC',
                   'posts_per_page' => -1 );

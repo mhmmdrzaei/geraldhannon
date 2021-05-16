@@ -1,7 +1,12 @@
 $(function(){
 
 	console.log("It's working");
-	
+	$('.menuSection ul.toggle').click(function(){
+        $(this).toggleClass('active');
+        $('.menuSection').toggleClass('mobileActive');
+        $('ul.menu').toggleClass('mobileInnerActive');
+        $('body').toggleClass('overflowHidden');
+                });
 
 });
 

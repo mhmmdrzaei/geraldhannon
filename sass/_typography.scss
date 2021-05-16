@@ -11,6 +11,9 @@ h2 {
 	position: relative;
 	top: -10px;
 }
+h3 {
+	margin: 0;
+}
 
 a {
 	text-decoration: none;
@@ -23,6 +26,8 @@ h1 {
 }
 p, a{
 	@include fontSize(11);
+	overflow-wrap: break-word;
+ 	 word-wrap: break-word;
 }
 
 /*

@@ -3,6 +3,7 @@
     <?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
     <section class="photosMain">
         <section class="photosText">
+        <h3 class="photosTitle"><?php the_title(); ?></h3>
            <?php the_content(); ?> 
         </section>
         <?php 

@@ -2,7 +2,9 @@
 <main>
       <?php // Start the loop ?>
       <?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
+      	
         <section class="aboutMeContent">
+        <h3 class="aboutTitle"><?php the_title(); ?></h3>
           <?php the_content(); ?>
         </section>
         

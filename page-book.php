@@ -3,6 +3,7 @@
     <?php if(have_posts()) : while(have_posts()) : the_post(); ?>
     <section class="pageBookContent">
         <section class="pageBookside">
+            <h3 class="bookTitleMobile"><a href="#"><?php the_title(); ?></a></h3>
             <figure>
                <?php the_post_thumbnail('large'); ?> 
             </figure>

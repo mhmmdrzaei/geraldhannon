@@ -1,7 +1,9 @@
 <?php get_header();  ?>
 <main>
+  <section class="articleMain">
   <?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
   <section class="articlesText">
+    <h3 class="articlesTitle"><?php the_title(); ?></h3>
     <?php the_content(); ?>
   </section>
   <section class="articleSearch">
@@ -13,6 +15,7 @@
     </section>
     
   </section>
+</section>
    <?php endwhile; // end the loop?>
    <?php get_footer(); ?>
 </main>

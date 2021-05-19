@@ -11,9 +11,7 @@
         <?php the_content(); ?>
 
       <?php endwhile; // end the loop?>
-    </div> <!-- /,content -->
-
-    <?php get_sidebar(); ?>
+    </div>
 
   </div> <!-- /.container -->
 </div> <!-- /.main -->

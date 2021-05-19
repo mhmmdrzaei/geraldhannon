@@ -53,6 +53,7 @@ header {
 	.headerMain {
 		@extend .flex;
 		width: 100%;
+		padding-top: 20px;
 		align-items:center;
 		justify-content:space-between;
 	}
@@ -155,6 +156,9 @@ header {
 	}
 }
 //book 
+.bookTitleMobile {
+	display: none;
+}
 .pageBookContent {
 	@extend .flex;
 	margin-top: 50px;
@@ -183,7 +187,9 @@ header {
 	}
 	.pageBookMain {
 		width: 50%;
-		h2 a{
+		h2 {
+			top: 0;
+			a{
 			background:#00d400;
 			text-transform: uppercase;
 			text-decoration: underline;
@@ -191,6 +197,7 @@ header {
 			max-width: 340px;
 			cursor: auto;
 		}
+		}	
 		figure {
 			text-align: right;
 			position: relative;
@@ -444,13 +451,18 @@ footer {
 	}
 	
 }
-.page-id-39 footer, .page-id-37 footer {
+ .page-id-37 footer {
 	position: absolute;
 	bottom: 0;
 	width: 90%;
 }
 .pageMain, .articleMain,.pageBookContent {
 	min-height: 81vh;
+}
+.notFound {
+	min-height: 81vh;
+	text-align: center;
+	padding-top: 20vh;
 }
 
 //media Quaries
@@ -597,6 +609,7 @@ footer {
 					width: 90%;
 				}
 				.bookTitleMobile {
+					display: block;
 					margin-bottom: 20px;
 					a {
 						background:#00d400;

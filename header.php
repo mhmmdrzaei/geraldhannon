@@ -14,8 +14,8 @@
 <body <?php body_class(); ?>>
 
 <header>
-  <section class="headerMain">
-  <div class="pageTitle" aria-label="Website Title">
+  <section class="headerMain" role="contentinfo" aria-label="container with Page title and Menu">
+  <section class="pageTitle" role="contentinfo" aria-label="Website Title">
     
       <a href="<?php echo home_url( '/' ); ?>" title="<?php bloginfo( 'name', 'display' ); ?>" rel="home">
        <h1> <?php bloginfo( 'name' ); ?></h1>
@@ -23,8 +23,8 @@
       </a>
     
     
-  </div>
-  <section class="menuSection" aria-label="Menu">
+  </section>
+  <section class="menuSection" role="contentinfo" aria-label="container with Menu Items">
     <ul class="toggle">
                     <li></li>
                     <li></li>

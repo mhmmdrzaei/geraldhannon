@@ -2,7 +2,7 @@
 <main>
     <?php if(have_posts()) : while(have_posts()) : the_post(); ?>
     <?php endwhile; endif; ?>
-  <section class="pressMain">
+  <article class="pressMain" role="contentinfo" aria-label="a list of press Items and mentions of Gerald in the Media">
     <h3 class="pressTitle"><?php the_title(); ?></h3>
       <?php $args = array( 'post_type' => 'press', 
                 'order'       => 'DESC',
@@ -10,7 +10,7 @@
         query_posts( $args ); // hijack the main loop
         while ( have_posts() ) : the_post();
           ?>
-          <section class="pressEach">
+          <section class="pressEach" role="contentinfo" aria-label="container with a single press Item and information">
             <?php if( have_rows('link_or_file_upload_press') ): ?>
                 <?php while( have_rows('link_or_file_upload_press') ): the_row(); 
 
@@ -31,7 +31,7 @@
               <?php endwhile; ?>
           <?php endif; ?>
     
-  </section>
+  </article>
     <?php endwhile;?>
     <?php wp_reset_query();?> 
   <?php get_footer(); ?>

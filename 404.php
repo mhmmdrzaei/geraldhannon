@@ -1,13 +1,16 @@
 <?php get_header(); ?>
 
-<div class="main">
-  <div class="container">
+<main>
+	<section class="notFound" role="contentinfo" aria-label="Page Not Found. Please navigate to available pages by tabbing through the menu">
+	<h1>Not Found</h1>
+    <p>Apologies, but the page you requested could not be found. </p>
+	</section>
 
-    <h1>Not Found</h1>
-    <p>Apologies, but the page you requested could not be found. Perhaps searching will help.</p>
-    <?php get_search_form(); ?>
 
-  </div> <!-- /.container -->
-</div> <!-- /.main -->
+    <?php get_footer(); ?>
+	
+</main>
 
-<?php get_footer(); ?>
+
+
+

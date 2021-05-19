@@ -8,10 +8,11 @@
   </section>
   <section class="articleSearch" role="contentinfo" aria-label="section containing search bar and advanced search parameters. All articles will open as PDF files in a new tab">
     <section class="searchSettings" role="contentinfo" aria-label="container holding the search functionality">
-      <?php echo do_shortcode("[wd_asp elements='search,settings' ratio='100%,100%' id=1]"); ?>
+      <?php echo do_shortcode("[wd_asp elements='search,settings' ratio='100%,100%' id=2]"); ?>
+
     </section>
     <section class="searchresults" role="contentinfo" aria-label="container where search results will auto populate">
-      <?php echo do_shortcode("[wd_asp elements='results' ratio='100%' id=1]"); ?>
+      <?php echo do_shortcode("[wd_asp elements='results' ratio='100%' id=2]"); ?>
     </section>
     
   </section>

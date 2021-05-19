@@ -53,28 +53,31 @@ add_action( 'wp_enqueue_scripts', 'hackeryou_styles');
 We'll let WordPress add them to our templates automatically instead
 of writing our own script tags in the header and footer. */
 
-function gh_scripts() {
+function hackeryou_scripts() {
 
-	//Don't use WordPress' local copy of jquery, load our own version from a CDN instead
-	wp_deregister_script('jquery');
+  //Don't use WordPress' local copy of jquery, load our own version from a CDN instead
+  wp_deregister_script('jquery');
   wp_enqueue_script(
-  	'jquery',
-  	"https" . ($_SERVER['SERVER_PORT'] == 443 ? "s" : "") . "://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js",
-  	false, //dependencies
-  	null, //version number
-  	true //load in footer
+    'jquery',
+    "https" . ($_SERVER['SERVER_PORT'] == 443 ? "s" : "") . "://code.jquery.com/jquery-latest.min.js",
+    false, //dependencies
+    null, //version number
+    true //load in footer
   );
+
+    wp_deregister_script('imagesloaded');
+    wp_enqueue_script(
+      'imagesloaded',
+      "https" . ($_SERVER['SERVER_PORT'] == 443 ? "s" : "") . "://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/3.1.8/imagesloaded.pkgd.min.js",
+      false, //dependencies
+      null, //version number
+      true //load in footer
+    );
+
 
   wp_enqueue_script(
     'plugins', //handle
     get_template_directory_uri() . '/js/plugins.js', //source
-    false, //dependencies
-    null, // version number
-    true //load in footer
-  );
-    wp_enqueue_script(
-    'colorbox', //handle
-    get_template_directory_uri() . '/js/jquery.colorbox-min.js', //source
     false, //dependencies
     null, // version number
     true //load in footer
@@ -87,9 +90,17 @@ function gh_scripts() {
     null, // version number
     true //load in footer
   );
+  
+  wp_enqueue_script(
+    'colorbox', //handle
+    get_template_directory_uri() . '/js/jquery.colorbox-min.js', //source
+    false, //dependencies
+    null, // version number
+    true //load in footer
+  );
 }
 
-add_action( 'wp_enqueue_scripts', 'gh_scripts');
+add_action( 'wp_enqueue_scripts', 'hackeryou_scripts');
 
 
 /* Custom Title Tags */

@@ -59,22 +59,22 @@ function hackeryou_scripts() {
   wp_deregister_script('jquery');
   wp_enqueue_script(
     'jquery',
-    "https" . ($_SERVER['SERVER_PORT'] == 443 ? "s" : "") . "://code.jquery.com/jquery-latest.min.js",
+    "http" . ($_SERVER['SERVER_PORT'] == 443 ? "s" : "") . "://code.jquery.com/jquery-latest.min.js",
     false, //dependencies
     null, //version number
     true //load in footer
   );
 
-    wp_deregister_script('imagesloaded');
-    wp_enqueue_script(
-      'imagesloaded',
-      "https" . ($_SERVER['SERVER_PORT'] == 443 ? "s" : "") . "://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/3.1.8/imagesloaded.pkgd.min.js",
-      false, //dependencies
-      null, //version number
-      true //load in footer
-    );
+    // wp_deregister_script('imagesloaded');
+    // wp_enqueue_script(
+    //   'imagesloaded',
+    //   "https" . ($_SERVER['SERVER_PORT'] == 443 ? "s" : "") . "://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/3.1.8/imagesloaded.pkgd.min.js",
+    //   false, //dependencies
+    //   null, //version number
+    //   true //load in footer
+    // );
 
-
+wp_deregister_script('plugins');
   wp_enqueue_script(
     'plugins', //handle
     get_template_directory_uri() . '/js/plugins.js', //source
@@ -82,7 +82,7 @@ function hackeryou_scripts() {
     null, // version number
     true //load in footer
   );
-
+wp_deregister_script('scripts');
   wp_enqueue_script(
     'scripts', //handle
     get_template_directory_uri() . '/js/main.min.js', //source
@@ -91,6 +91,7 @@ function hackeryou_scripts() {
     true //load in footer
   );
   
+  wp_deregister_script('colorbox');
   wp_enqueue_script(
     'colorbox', //handle
     get_template_directory_uri() . '/js/jquery.colorbox-min.js', //source

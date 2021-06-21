@@ -1,5 +1,5 @@
 <footer role="contentinfo" aria-label="Copyright Information for this website">
-    <p>&copy; <?php echo date('Y'); ?> Gerald Hannon<br> All images and site content copyright GeraldHannon.</p>
+    <p>&copy; <?php echo date('Y'); ?> Gerald Hannon<br> All images and site content copyright Gerald Hannon.</p>
 </footer>
 
 <script>
